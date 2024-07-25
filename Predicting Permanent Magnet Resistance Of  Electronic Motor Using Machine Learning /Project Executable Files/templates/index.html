@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body {
+            background-image: url('https://www.mdpi.com/designs/designs-07-00007/article_deploy/html/images/designs-07-00007-g001.png'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        li a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Machine Learning Model Application</h1>
+    <p>Use the links below to navigate:</p>
+    <ul>
+        <li><a href="/">Go to Prediction Form</a></li>
+    </ul>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Learning Prediction</title>
+    <!-- Bootstrap CSS for styling -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Optional: Add custom styles -->
+    <style>
+        body {
+            /* Example background image */
+            background-image: url('https://www.shutterstock.com/image-photo/engineer-checking-temperature-on-electric-260nw-2257627609.jpg');
+            /* Background image properties */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            /* Set text color and font */
+            color: #333;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for form */
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 50px;
+        }
+        
+        h1 {
+            margin-bottom: 30px;
+            text-align: center; /* Center align the heading */
+        }
+
+        /* Adjust form input styles */
+        .form-group label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Machine Learning Prediction</h1>
+        <form method="post" action="/predict">
+            <!-- Form inputs -->
+            <div class="form-group">
+                <label for="u_q">u_q:</label>
+                <input type="number" step="any" class="form-control" id="u_q" name="u_q" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="coolant">Coolant:</label>
+                <input type="number" step="any" class="form-control" id="coolant" name="coolant" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="u_d">u_d:</label>
+                <input type="number" step="any" class="form-control" id="u_d" name="u_d" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="motor_speed">Motor Speed:</label>
+                <input type="number" step="any" class="form-control" id="motor_speed" name="motor_speed" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="i_d">i_d:</label>
+                <input type="number" step="any" class="form-control" id="i_d" name="i_d" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="i_q">i_q:</label>
+                <input type="number" step="any" class="form-control" id="i_q" name="i_q" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="ambient">Ambient:</label>
+                <input type="number" step="any" class="form-control" id="ambient" name="ambient" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="profile_id">Profile ID:</label>
+                <input type="number" step="any" class="form-control" id="profile_id" name="profile_id" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="stator_winding">Stator Winding:</label>
+                <input type="number" step="any" class="form-control" id="stator_winding" name="stator_winding" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="stator_tooth">Stator Tooth:</label>
+                <input type="number" step="any" class="form-control" id="stator_tooth" name="stator_tooth" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="stator_yoke">Stator Yoke:</label>
+                <input type="number" step="any" class="form-control" id="stator_yoke" name="stator_yoke" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="torque">Torque:</label>
+                <input type="number" step="any" class="form-control" id="torque" name="torque" required>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
